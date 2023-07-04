@@ -48,4 +48,15 @@
 ## INIT
 - IMPORT REACT
 
-- 
+- ToDoList - The UI molecule
+
+- localStorage - returns the list when you last used it
+
+## FUNCTIONAL
+- export default function ToDoList {
+    - completedList
+    - incompletedList
+    - checkItems - addEventListener
+    - addItems  - addEventListener / Input
+    - clearItems - addEventListener
+    }
