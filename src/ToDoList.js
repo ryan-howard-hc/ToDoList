@@ -23,7 +23,12 @@ function ToDoList() {
     }
 
     function clearToDo() {
-        clearAll?
+        const clearToDoItems = toDos.filter(toDo => !toDo.completed);
+        setToDos(clearToDoItems);
+    }
+
+    function clearAllItems(){
+        setToDos([]);
     }
 
     return (
@@ -39,6 +44,7 @@ function ToDoList() {
           />
         ))}
         </ul>
-    </div>)
-          
+        <ClearItems clearToDo={clearToDo} clearAllItems={clearAllItems} />
+    </div>
+    );
 }
