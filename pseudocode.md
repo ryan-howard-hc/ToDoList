@@ -24,7 +24,7 @@
 ## Wont Have: 
 - BROKEN website
 
-# ATOMIC DESIGN
+# ATOMIC DESIGN - OBJECTS/COMPONENTS
 ## Atoms
 - INTERACTIVE UI
     - COMPLETED ITEMS
@@ -36,12 +36,15 @@
     - CLEAR ITEMS
 - INPUT FIELD
 ## Molecules
+- HEADER
+    - Name / info / links?
 - ALARMS
+    - Connecting time/date with lists
 - REMINDER FUNCTIONS
 - LIST AND LIST DISPLAYS
 ## Organisms
-- INTERACTIVITY BETWEEN ALL ASPECTS
 - THE WHOLE UI 
+    - APP
 
 # PROCEDURAL
 ## BEGIN
