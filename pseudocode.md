@@ -53,10 +53,52 @@
 - localStorage - returns the list when you last used it
 
 ## FUNCTIONAL
-- export default function ToDoList {
-    - completedList
+- export default function ToDoList {                                    // MAIN COMPONENT
+    - const [toDos, setToDos] = React.useState([]);
+    - const [inputValue, setInputValue] = React.useState('');
+
+    - completedList     
+
     - incompletedList
-    - checkItems - addEventListener
-    - addItems  - addEventListener / Input
-    - clearItems - addEventListener
+
+    - function addToDo(){
+        const newToDo = {
+            id: Number maybe?
+            text: input
+            completed: false? !=
+        };
+        setToDos;
+        set input('');
+    }                          //function and/or input to add items
+
+    - checkItems - addEventListener             //function and/or button to determine which items are completed
+    function checkItems([id]) {
+        checkItems(toDos.map => toDo.id);
     }
+
+    - clearItems - addEventListener              // function and/or button to clear items or the whoel list
+    function clearItems([id]) {
+        setToDos(toDos.filter => toDo.id);
+    }
+
+    return (
+        <div>
+            <h1>To-Do</h1>
+        </div>
+        <input> 
+            "text here"
+            <button onClick=addToDo>
+        </input>
+        {toDos.map(toDo => 
+        <Accordion key ={toDo.id}>
+            <input checkbox>
+            <button onClick=checkItems></button>
+            <button onClick=clearItems></button>
+        </Accordion>
+        )}
+    )
+    }
+
+
+- ReactDOM.render(<TodoList />, document.getElementById('root')); - render the js
+
