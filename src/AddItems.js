@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function addItems({toDoText}) {
+function AddItems({toDoText}) {
     const [inputValue, setInputValue] = useState('');
 
     function toDoSubmit(event) {
@@ -25,4 +25,4 @@ function addItems({toDoText}) {
       );
     }
     
-    export default addItems;
+    export default AddItems;
