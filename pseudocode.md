@@ -143,3 +143,7 @@
 
 - Inputs
 <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input -->
+
+- Operators
+<!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax -->
