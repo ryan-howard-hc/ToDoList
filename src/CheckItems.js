@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 function CheckItems({ todo, toggleTodo }) {
     return (
+    <div>
       <li>
         <input
           type="checkbox"
@@ -10,6 +11,8 @@ function CheckItems({ todo, toggleTodo }) {
         />
         {todo.text}
       </li>
+            <ClearItems clearTodoItems={clearTodoItems} clearAllItems={clearAllItems} />
+    </div>
     );
   }
 
