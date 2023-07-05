@@ -76,10 +76,13 @@
 
     - checkItems - addEventListener             //function and/or button to determine which items are completed
     - function checkItems([id]) {
+        - const [inputValue, setInputValue] = useState('');
         - checkItems(toDos.map => toDo.id, toDo.text, toDo.completed);
     }
 
     - clearItems - addEventListener              // function and/or button to clear items or the whoel list
+        - const [inputValue, setInputValue] = useState('');
+
     - function clearItems([id]) {
         - setToDos(toDos.filter => toDo.id, toDo.text, toDo.completed);
     }
@@ -123,3 +126,5 @@ LocalStorage
 <!-- https://blog.logrocket.com/using-localstorage-react-hooks/ -->
 <!-- https://www.freecodecamp.org/news/how-to-use-localstorage-with-react-hooks-to-set-and-get-items/ -->
 
+Events
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/Event -->
