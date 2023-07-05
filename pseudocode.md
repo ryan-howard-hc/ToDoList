@@ -24,7 +24,7 @@
 ## Wont Have: 
 - BROKEN website
 
-# ATOMIC DESIGN
+# ATOMIC DESIGN - OBJECTS/COMPONENTS
 ## Atoms
 - INTERACTIVE UI
     - COMPLETED ITEMS
@@ -36,12 +36,15 @@
     - CLEAR ITEMS
 - INPUT FIELD
 ## Molecules
+- HEADER
+    - Name / info / links?
 - ALARMS
+    - Connecting time/date with lists
 - REMINDER FUNCTIONS
 - LIST AND LIST DISPLAYS
 ## Organisms
-- INTERACTIVITY BETWEEN ALL ASPECTS
 - THE WHOLE UI 
+    - APP
 
 # PROCEDURAL
 ## BEGIN
@@ -62,24 +65,28 @@
     - incompletedList
 
     - function addToDo(){
-        const newToDo = {
-            id: Number maybe?
-            text: input
-            completed: false? !=
+        - const newToDo = {
+            - id: Number maybe?
+            - text: input
+            - completed: false? !=
         };
-        setToDos;
-        set input('');
+        - setToDos;
+        - set input('');
     }                          //function and/or input to add items
 
     - checkItems - addEventListener             //function and/or button to determine which items are completed
-    function checkItems([id]) {
-        checkItems(toDos.map => toDo.id);
+    - function checkItems([id]) {
+        - checkItems(toDos.map => toDo.id, toDo.text, toDo.completed);
     }
 
     - clearItems - addEventListener              // function and/or button to clear items or the whoel list
-    function clearItems([id]) {
-        setToDos(toDos.filter => toDo.id);
+    - function clearItems([id]) {
+        - setToDos(toDos.filter => toDo.id, toDo.text, toDo.completed);
     }
+
+    - React.useEffect(() => {                       //save to local storage
+    - localStorage.setItem('todos', JSON.stringify(todos));
+    - }, [todos]);
 
     return (
         <div>
@@ -101,4 +108,18 @@
 
 
 - ReactDOM.render(<TodoList />, document.getElementById('root')); - render the js
+
+
+General React Structure
+<!-- https://blog.webdevsimplified.com/2022-07/react-folder-structure/ -->
+
+General Tools/Syntax
+<!-- https://www.freecodecamp.org/news/the-react-cheatsheet/ -->
+<!-- https://www.freecodecamp.org/news/build-accordion-menu-in-react-without-external-libraries/ -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array -->
+
+LocalStorage 
+<!-- https://blog.logrocket.com/using-localstorage-react-hooks/ -->
+<!-- https://www.freecodecamp.org/news/how-to-use-localstorage-with-react-hooks-to-set-and-get-items/ -->
 
