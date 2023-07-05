@@ -113,18 +113,33 @@
 - ReactDOM.render(<TodoList />, document.getElementById('root')); - render the js
 
 
-General React Structure
+
+#APP COMPONENT 
+- function App() {
+    - return (
+        <>
+        - <Header />
+        - <ToDoList />
+        </>
+    );
+}
+
+
+- General React Structure
 <!-- https://blog.webdevsimplified.com/2022-07/react-folder-structure/ -->
 
-General Tools/Syntax
+- General Tools/Syntax
 <!-- https://www.freecodecamp.org/news/the-react-cheatsheet/ -->
 <!-- https://www.freecodecamp.org/news/build-accordion-menu-in-react-without-external-libraries/ -->
 <!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now -->
 <!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array -->
 
-LocalStorage 
+- LocalStorage 
 <!-- https://blog.logrocket.com/using-localstorage-react-hooks/ -->
 <!-- https://www.freecodecamp.org/news/how-to-use-localstorage-with-react-hooks-to-set-and-get-items/ -->
 
-Events
+- Events
 <!-- https://developer.mozilla.org/en-US/docs/Web/API/Event -->
+
+- Inputs
+<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input -->
