@@ -67,7 +67,8 @@ function ToDoList() {
     }
 
     return (
-      <div className="container" style={{}}>
+      <div className="container">
+        <div className="container2">
         <h1 className="title">To Do List</h1>
         <AddItems addItem={addItem} />
         <ul className="list" style={{}}>
@@ -81,6 +82,7 @@ function ToDoList() {
           ))}
         </ul>
         <ClearItems clearToDoItems={clearToDoItems} clearAllItems={clearAllItems} />
+        </div>
       </div>
     );
   }
