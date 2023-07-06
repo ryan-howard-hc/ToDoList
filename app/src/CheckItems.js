@@ -1,15 +1,15 @@
 import React from 'react';
 import { useEffect, useState} from 'react';
 
-function CheckItems({ todo, toggleToDo }) {
+function CheckItems({ toDo, toggleToDo }) {
     return (
-      <li>
+      <li style={{ textDecoration: toDo.completed ? 'line-through' : 'none' }}>
         <input
           type="checkbox"
-          checked={todo.completed}
-          onChange={() => toggleToDo(todo.id)}
+          checked={toDo.completed}
+          onChange={() => toggleToDo(toDo.id)}
         />
-        {todo.text}
+        {toDo.text}
       </li>
       
     );

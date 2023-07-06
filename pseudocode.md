@@ -127,6 +127,7 @@
 
 - General React Structure
 <!-- https://blog.webdevsimplified.com/2022-07/react-folder-structure/ -->
+<!-- https://www.w3schools.com/react/react_usestate.asp -->
 
 - General Tools/Syntax
 <!-- https://www.freecodecamp.org/news/the-react-cheatsheet/ -->
