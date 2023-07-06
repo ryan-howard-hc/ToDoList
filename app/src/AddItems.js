@@ -21,10 +21,11 @@ function AddItems({addItem}) {
             type="text"
             value={inputValue}
             onChange={inputSubmit}
-            placeholder="What else do I need to do?"
+            placeholder="What else to do?"
           />
-          <button type="submit">Add Item</button>
+          <button className="btn btn-primary btn-lg fw-bold" style={{ fontWeight: 'bold', fontStyle: 'italic' }} type="submit">Add Item</button>
         </form>
+        
         </div>
       );
     }
