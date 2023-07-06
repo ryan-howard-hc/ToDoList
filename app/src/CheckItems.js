@@ -1,18 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useEffect, useState} from 'react';
 
-function CheckItems({ todo, toggleTodo }) {
+function CheckItems({ todo, toggleToDo }) {
     return (
-    <div>
       <li>
         <input
           type="checkbox"
           checked={todo.completed}
-          onChange={() => toggleTodo(todo.id)}
+          onChange={() => toggleToDo(todo.id)}
         />
         {todo.text}
       </li>
-            <ClearItems clearTodoItems={clearTodoItems} clearAllItems={clearAllItems} />
-    </div>
+      
     );
   }
 
