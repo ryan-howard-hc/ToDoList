@@ -1,0 +1,12 @@
+
+.additems form {
+  text-align: center;
+}
+
+.additems input {
+  margin-right: 10px;
+}
+
+.additems button {
+  margin-left: 10px;
+}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './AddItems.css';
 
 function AddItems({addItem}) {
     const [inputValue, setInputValue] = useState('');
@@ -14,7 +15,8 @@ function AddItems({addItem}) {
     }
 
     return (
-        <form onSubmit={toDoSubmit}>
+      <div className='additems'>
+        <form  onSubmit={toDoSubmit}>
           <input
             type="text"
             value={inputValue}
@@ -23,6 +25,7 @@ function AddItems({addItem}) {
           />
           <button type="submit">Add Item</button>
         </form>
+        </div>
       );
     }
     
