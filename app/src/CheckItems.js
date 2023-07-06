@@ -1,18 +1,26 @@
 import React from 'react';
 
-function CheckItems({ toDo, toggleCompleted }) {
-  const completed = toDo && toDo.completed ? toDo.completed : false;
-
+function CheckItems({ toDo, toggleCompleted, toggleInProgress }) {
   return (
-    <li style={{ textDecoration: completed ? 'line-through' : 'none' }}>
-      <input
-        type="checkbox"
-        checked={completed}
-        onChange={() => toggleCompleted(toDo.id)}
-      />
-      {toDo.text}
+    <li>
+      <label>
+        <input
+          type="checkbox"
+          checked={toDo.inProgress}
+          onChange={() => toggleInProgress(toDo.id)}
+        />
+        In Progress
+      </label>
+      <span style={{ textDecoration: toDo.completed ? 'line-through' : 'none' }}>{toDo.text}</span>
+      <label>
+        <input
+          type="checkbox"
+          checked={toDo.completed}
+          onChange={() => toggleCompleted(toDo.id)}
+        />
+        Completed
+      </label>
     </li>
   );
 }
-
 export default CheckItems;
