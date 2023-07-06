@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import './ToDoList.css';
 import  AddItems  from './AddItems';
 import  CheckItems from './CheckItems';
 import  ClearItems  from './ClearItems';
@@ -67,10 +67,10 @@ function ToDoList() {
     }
 
     return (
-      <div>
-        <h1>To Do List</h1>
+      <div className="container" style={{}}>
+        <h1 className="title">To Do List</h1>
         <AddItems addItem={addItem} />
-        <ul>
+        <ul className="list" style={{}}>
           {toDos.map(toDo => (
             <CheckItems
               toggleCompleted={() => toggleCompleted(toDo.id)}
