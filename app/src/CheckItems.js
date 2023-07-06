@@ -16,25 +16,3 @@ function CheckItems({ toDo, toggleCompleted }) {
 }
 
 export default CheckItems;
-
-
-// import React from 'react';
-// import { useEffect, useState} from 'react';
-
-// function CheckItems({ toDo, toggleToDo }) {
-//   const completed = toDo && toDo.completed ? toDo.completed : false;
-//     return (
-//       <li style={{ textDecoration: toDo.completed ? 'line-through' : 'none' }}>
-//         <input
-//           type="checkbox"
-//           checked={toDo.completed}
-//           onChange={() => toggleToDo(toDo.id)}
-//         />
-//         {toDo.text}
-//       </li>
-      
-//     );
-//   }
-
-
-// export default CheckItems;
