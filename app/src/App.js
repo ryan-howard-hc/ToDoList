@@ -1,6 +1,6 @@
 import React from 'react';
-import { Header } from './Header.js';
-import { ToDoList } from './ToDoList.js';
+import Header from './Header';
+import ToDoList from './ToDoList';
 import './App.css';
 
 function App() {

@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { AddItems } from './AddItems.js';
-import { CheckItems } from './CheckItems.js';
-import { ClearItems } from './ClearItems.js';
+import  AddItems  from './AddItems';
+import  CheckItems from './CheckItems';
+import  ClearItems  from './ClearItems';
 
 function ToDoList() {
     const [toDos, setToDos] = useState ([]);
 
-    useEffect(() => {
-      const storedToDos = localStorage.getItem('toDos');
-      if (storedToDos) {
-        setToDos(JSON.parse(storedToDos));
-      }
-    }, []);
+    // useEffect(() => {
+    //   const storedToDos = localStorage.getItem('toDos');
+    //   if (storedToDos) {
+    //     setToDos(JSON.parse(storedToDos));
+    //   }
+    // }, []);
   
-    useEffect(() => {
-      localStorage.setItem('toDos', JSON.stringify(toDos));
-    }, [toDos]);
+    // useEffect(() => {
+    //   localStorage.setItem('toDos', JSON.stringify(toDos));
+    // }, [toDos]);
 
     function addItem(itemText) {
         const newToDo = {
@@ -30,50 +30,39 @@ function ToDoList() {
     function toggleCompleted(id) {
       setToDos(toDos.map(toDo => {
         if (toDo.id === id) {
-          const updatedToDo = {};
-          for (let prop in toDo) {
-            if (prop === 'completed') {
-              updatedToDo.completed = !toDo.completed;
-            } else {
-              updatedToDo[prop] = toDo[prop];
-            }
-          }
-          return updatedTodo;
+          const updatedToDo = { ...toDo };
+          updatedToDo.completed = !toDo.completed;
+          return updatedToDo;
         }
-        return todo;
+        return toDo;
       }));
     }
-
-    //     setToDos(toDos.map(toDo =>
-    //         toDo.id === id ? {...toDo, completed: !toDo.completed} : toDo
-    //     )); //spread operator creates new object that copies properties of the toDo object. The !toDo.completed updates its value using the logical not operator
-    // }
-
+  
     function clearToDo() {
-        const clearToDoItems = toDos.filter(toDo => !toDo.completed);
-        setToDos(clearToDoItems);
+      const clearToDoItems = toDos.filter(toDo => !toDo.completed);
+      setToDos(clearToDoItems);
     }
-
-    function clearAllItems(){
-        setToDos([]);
+  
+    function clearAllItems() {
+      setToDos([]);
     }
-
+  
     return (
-    <div>
+      <div>
         <h1>Todo List</h1>
-          <AddItems addItem={addItem} />
+        <AddItems addItem={addItem} />
         <ul>
-        {todos.map(todo => (
-          <CheckItems
-            key={todo.id}
-            todo={todo}
-            toggleCompleted={toggleCompleted}
-          />
-        ))}
+          {toDos.map(toDo => (
+            <CheckItems
+              key={toDo.id}
+              toDo={toDo}
+              toggleCompleted={toggleCompleted}
+            />
+          ))}
         </ul>
         <ClearItems clearToDo={clearToDo} clearAllItems={clearAllItems} />
-    </div>
+      </div>
     );
-}
-
-export default ToDoList;
+  }
+  
+  export default ToDoList;
