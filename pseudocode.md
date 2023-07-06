@@ -2,15 +2,20 @@
 ## Must have:
 - AGILE SOFTWARE DEVELOPMENT WITH ANONYMOUS USER IN MIND WITH GOALS BELOW AS OBJECTIVE FOR THE USER
 - INPUT for entering items in a todo list
+<!-- DONE -->
 - VIEW all of my list items and their status (COMPLETED, IN PROGRESS, TODO)
 - BUTTONS to complete tasks/uncheck tasks that I think Ive done or accidentally clicked, clear tasks, add tasks
+<!-- DONE -->
 - DISPLAY checked items with a strikethrough
+<!-- DONE -->
 - BUTTON FOR REACTIVATION
+<!-- DONE -->
 - STYLIZED WEBSITE
 
 
 ## Should have:
-- LOCAL STORAGE for persisent data
+- LOCAL STORAGE for persisent data              
+<!-- DONE -->
 - FLOW CHART for front end minimal viable product
 - DUE DATES
 

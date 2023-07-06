@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
+
 import  AddItems  from './AddItems';
 import  CheckItems from './CheckItems';
 import  ClearItems  from './ClearItems';
+
 
 function ToDoList() {
   const [toDos, setToDos] = React.useState(() => {
     const storedTodos = localStorage.getItem('todos');                //INITIAL STATE is set with the function that retrieves the local storage at the start
     return storedTodos ? JSON.parse(storedTodos) : [];                //EXECUTED DURING INITIAL RENDER
   });
-
 
   // React.useEffect(() => {                                          //doesnt work because useEffect runs AFTER initial state
   //   const storedTodos = localStorage.getItem('todos');             //it DID retrieve the data, but the initial state had already been
