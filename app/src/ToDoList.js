@@ -39,7 +39,7 @@ function ToDoList() {
     }
   
 
-    function clearToDo() {
+    function clearToDoItems() {
       const updatedToDos = toDos.filter(toDo => !toDo.completed);
       setToDos(updatedToDos);
     }
@@ -50,18 +50,18 @@ function ToDoList() {
   
     return (
       <div>
-        <h1>Todo List</h1>
+        <h1>To Do List</h1>
         <AddItems addItem={addItem} />
         <ul>
           {toDos.map(toDo => (
             <CheckItems
               key={toDo.id}
               toDo={toDo}
-              toggleCompleted={toggleCompleted}
+              toggleCompleted={() => toggleCompleted(toDo.id)}
             />
           ))}
         </ul>
-        <ClearItems clearToDo={clearToDo} clearAllItems={clearAllItems} />
+        <ClearItems clearToDoItems={clearToDoItems} clearAllItems={clearAllItems} />
       </div>
     );
   }
