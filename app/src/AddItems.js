@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 
-function AddItems({toDoText}) {
+function AddItems({addItem}) {
     const [inputValue, setInputValue] = useState('');
 
-    function toDoSubmit(event) {
-        toDoText(inputValue);
+    function toDoSubmit(event) { 
+      event.preventDefault(); //now i can read the error at least...
+        addItem(inputValue);
         setInputValue('');
     }
 
