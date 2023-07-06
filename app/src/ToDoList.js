@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { AddItems } from './AddItems.js';
 import { CheckItems } from './CheckItems.js';
 import { ClearItems } from './ClearItems.js';
 
 function ToDoList() {
     const [toDos, setToDos] = useState ([]);
+
+    useEffect(() => {
+      const storedToDos = localStorage.getItem('toDos');
+      if (storedToDos) {
+        setToDos(JSON.parse(storedToDos));
+      }
+    }, []);
+  
+    useEffect(() => {
+      localStorage.setItem('toDos', JSON.stringify(toDos));
+    }, [toDos]);
 
     function addItem(itemText) {
         const newToDo = {
