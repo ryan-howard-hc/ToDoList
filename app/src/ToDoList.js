@@ -28,7 +28,8 @@ function ToDoList() {
       const newToDo = {
         id: Date.now(),
         text: itemText,
-        completed: false
+        completed: false,
+        inProgress: false,
       };
   
       setToDos([...toDos, newToDo]);
@@ -41,8 +42,19 @@ function ToDoList() {
           updatedToDo.completed = !toDo.completed;
           return updatedToDo;
         }
-        return toDo;
+        return toDo;        //without this it checks all of them
       }));
+    }
+
+    function toggleInProgress(id) {
+      setToDos(toDos.map(toDo => {
+        if (toDo.id === id) {
+          const updatedToDo = { ...toDo };
+          updatedToDo.inProgress = !toDo.inProgress;
+          return updatedToDo;
+        }
+        return toDo;
+      }))
     }
 
     function clearToDoItems() {
@@ -61,9 +73,10 @@ function ToDoList() {
         <ul>
           {toDos.map(toDo => (
             <CheckItems
+              toggleCompleted={() => toggleCompleted(toDo.id)}
+              toggleInProgress={() => toggleInProgress(toDo.id)}
               key={toDo.id}
               toDo={toDo}
-              toggleCompleted={() => toggleCompleted(toDo.id)}
             />
           ))}
         </ul>

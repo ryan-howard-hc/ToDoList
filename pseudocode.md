@@ -23,6 +23,7 @@
 - AUTOMATIC marking to do based on time signatures
 - DUE DATES AND ALARMS 
 - BUTTON for removing all completed items (soft delete/archival)
+<!-- DONE -->
 - REMINDERS function
 - EDIT To-Do's inline with a doubleclick event that changes it from a rendered text to a text input.
 
