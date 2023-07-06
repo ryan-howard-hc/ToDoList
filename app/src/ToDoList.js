@@ -18,15 +18,15 @@ function ToDoList() {
     // }, [toDos]);
 
     function addItem(itemText) {
-        const newToDo = {
-          id: Date.now(),
-          text: itemText,
-          completed: false
-        };
-        
-    setToDos([...toDos, newToDo]);
+      const newToDo = {
+        id: Date.now(),
+        text: itemText,
+        completed: false
+      };
+  
+      setToDos([...toDos, newToDo]);
     }
-
+  
     function toggleCompleted(id) {
       setToDos(toDos.map(toDo => {
         if (toDo.id === id) {
@@ -38,9 +38,10 @@ function ToDoList() {
       }));
     }
   
+
     function clearToDo() {
-      const clearToDoItems = toDos.filter(toDo => !toDo.completed);
-      setToDos(clearToDoItems);
+      const updatedToDos = toDos.filter(toDo => !toDo.completed);
+      setToDos(updatedToDos);
     }
   
     function clearAllItems() {
