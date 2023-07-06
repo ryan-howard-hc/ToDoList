@@ -2,7 +2,7 @@ import React from 'react';
 
 function CheckItems({ toDo, toggleCompleted, toggleInProgress }) {
   return (
-    <li>
+    <li style={{display: 'flex'}}>
       <label>
         <input
           type="checkbox"
