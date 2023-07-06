@@ -2,6 +2,6 @@ import React from "react";
 
 export default function Header() {
     return(
-        <header>To Do List</header>
+        <header style={{display: 'flex', alignItems: 'center' }}>To Do List</header>
     )
 }
