@@ -11,7 +11,6 @@ function CheckItems({ toDo, toggleCompleted, toggleInProgress }) {
         />
         In Progress
       </label>
-      <span style={{ textDecoration: toDo.completed ? 'line-through' : 'none' }}>{toDo.text}</span>
       <label>
         <input
           type="checkbox"
@@ -20,6 +19,7 @@ function CheckItems({ toDo, toggleCompleted, toggleInProgress }) {
         />
         Completed
       </label>
+      <span style={{ marginLeft: '50px', textDecoration: toDo.completed ? 'line-through' : 'none' }}>{toDo.text}</span>
     </li>
   );
 }
