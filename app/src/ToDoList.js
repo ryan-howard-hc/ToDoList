@@ -4,18 +4,24 @@ import  CheckItems from './CheckItems';
 import  ClearItems  from './ClearItems';
 
 function ToDoList() {
-    const [toDos, setToDos] = useState ([]);
+  const [toDos, setToDos] = React.useState(() => {
+    const storedTodos = localStorage.getItem('todos');                //INITIAL STATE is set with the function that retrieves the local storage at the start
+    return storedTodos ? JSON.parse(storedTodos) : [];                //EXECUTED DURING INITIAL RENDER
+  });
 
-    // useEffect(() => {
-    //   const storedToDos = localStorage.getItem('toDos');
-    //   if (storedToDos) {
-    //     setToDos(JSON.parse(storedToDos));
-    //   }
-    // }, []);
-  
-    // useEffect(() => {
-    //   localStorage.setItem('toDos', JSON.stringify(toDos));
-    // }, [toDos]);
+
+  // React.useEffect(() => {                                          //doesnt work because useEffect runs AFTER initial state
+  //   const storedTodos = localStorage.getItem('todos');             //it DID retrieve the data, but the initial state had already been
+  //   if (storedTodos) {                                             //set to an empty array.
+  //     setToDos(JSON.parse(storedTodos));
+  //   }
+  // }, []);
+
+    React.useEffect(() => {
+      localStorage.setItem('todos', JSON.stringify(toDos));
+      console.log('Data saved to localStorage:', toDos);
+    }, [toDos]);
+    
 
     function addItem(itemText) {
       const newToDo = {
@@ -37,17 +43,16 @@ function ToDoList() {
         return toDo;
       }));
     }
-  
 
     function clearToDoItems() {
       const updatedToDos = toDos.filter(toDo => !toDo.completed);
       setToDos(updatedToDos);
     }
-  
+
     function clearAllItems() {
       setToDos([]);
     }
-  
+
     return (
       <div>
         <h1>To Do List</h1>
