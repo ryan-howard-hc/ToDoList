@@ -1,4 +1,5 @@
 import React from 'react';
+import inProgressImage from './work-in-progress.png';
 
 function CheckItems({ toDo, toggleCompleted, toggleInProgress }) {
   return (
@@ -19,7 +20,10 @@ function CheckItems({ toDo, toggleCompleted, toggleInProgress }) {
         />
         Completed
       </label>
-      <span style={{ marginLeft: '50px', textDecoration: toDo.completed ? 'line-through' : 'none' }}>{toDo.text}</span>
+      <span style={{ marginLeft: '50px', textDecoration: toDo.completed ? 'line-through' : 'none' }}>
+        {toDo.text}
+        {toDo.inProgress && <img src={inProgressImage}></img>}
+      </span>
     </li>
   );
 }
