@@ -157,3 +157,6 @@
 - Operators
 <!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators -->
 <!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax -->
+
+
+<!-- https://stackoverflow.com/questions/8012002/create-a-unique-number-with-javascript-time -->
