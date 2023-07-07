@@ -8,7 +8,7 @@ function AddItems({addItem}) {
 
     function toDoSubmit(event) { 
       event.preventDefault(); //now i can read the error at least...
-      addItem(JSON.stringify({ inputValue, dueDate }));
+      addItem(inputValue, dueDate);
       setInputValue('');
         setDueDate('');
     }
@@ -33,13 +33,11 @@ function AddItems({addItem}) {
           type="date"
           value={dueDate}
           onChange={dueDateSubmit}
-          placeholder="Due date"
           />
           <button className="btn btn-primary btn-lg fw-bold" style={{ fontWeight: 'bold', fontStyle: 'italic' }} type="submit">Add Item</button>
-        </form>
-        
-        </div>
-      );
-    }
+      </form>
+    </div>
+  );
+}
     
     export default AddItems;
