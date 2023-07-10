@@ -20,9 +20,9 @@ function AddItems({addItem}) {
     setDueDate(event.target.value);
   }
 
-    return (
+    return ( //leave the form behind, its for noobs
       <div className='additems'>
-        <form  onSubmit={toDoSubmit}>
+        <form  onSubmit={toDoSubmit}>     
           <input
             type="text"
             value={inputValue}

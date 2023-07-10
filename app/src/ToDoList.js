@@ -9,7 +9,7 @@ function ToDoList() {
   const [toDos, setToDos] = React.useState(() => {
     const storedTodos = localStorage.getItem('todos');                //INITIAL STATE is set with the function that retrieves the local storage at the start
     return storedTodos ? JSON.parse(storedTodos) : [];                //EXECUTED DURING INITIAL RENDER
-  });
+  });     //callback function 
 
   // React.useEffect(() => {                                          //doesnt work because useEffect runs AFTER initial state
   //   const storedTodos = localStorage.getItem('todos');             //it DID retrieve the data, but the initial state had already been
@@ -26,7 +26,7 @@ function ToDoList() {
 
     function addItem(itemText) {
       const newToDo = {
-        id: Date.now(),
+        id: Date.now(),     //creates unique identifier based on timestamp, thanks fox
         text: itemText,
         completed: false,
         inProgress: false,
@@ -36,21 +36,21 @@ function ToDoList() {
     }
   
     function toggleCompleted(id) {
-      setToDos(toDos.map(toDo => {
+      setToDos(toDos.map(toDo => {      
         if (toDo.id === id) {
-          const updatedToDo = { ...toDo };
-          updatedToDo.completed = !toDo.completed;
+          const updatedToDo = { ...toDo };    //this spread allows for a copy that can be altered without altering the original and put it into existing state
+          updatedToDo.completed = !toDo.completed;  //maybe couldve used dependency array method clayton used
           return updatedToDo;
         }
         return toDo;        //without this it checks all of them
       }));
     }
 
-    function toggleInProgress(id) {
+    function toggleInProgress(id) {               //
       setToDos(toDos.map(toDo => {
         if (toDo.id === id) {
           const updatedToDo = { ...toDo };
-          updatedToDo.inProgress = !toDo.inProgress;
+          updatedToDo.inProgress = !toDo.inProgress; 
           return updatedToDo;
         }
         return toDo;
@@ -74,7 +74,7 @@ function ToDoList() {
         <ul className="list" style={{}}>
           {toDos.map(toDo => (
             <CheckItems
-              toggleCompleted={() => toggleCompleted(toDo.id)}
+              toggleCompleted={() => toggleCompleted(toDo.id)}  //calls the  function w the property
               toggleInProgress={() => toggleInProgress(toDo.id)}
               key={toDo.id}
               toDo={toDo}

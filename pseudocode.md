@@ -16,7 +16,7 @@
 
 
 ## Should have:
-- LOCAL STORAGE for persisent data              
+- LOCAL STORAGE for persistent data              
 <!-- DONE -->
 - FLOW CHART for front end minimal viable product
 - DUE DATES
@@ -137,6 +137,7 @@
 <!-- https://blog.webdevsimplified.com/2022-07/react-folder-structure/ -->
 <!-- https://www.w3schools.com/react/react_usestate.asp -->
 <!-- https://create-react-app.dev/docs/adding-images-fonts-and-files/ -->
+<!-- https://www.w3schools.com/react/react_usecallback.asp -->
 
 - General Tools/Syntax
 <!-- https://www.freecodecamp.org/news/the-react-cheatsheet/ -->
