@@ -1,12 +1,13 @@
 import React from 'react';
 import inProgressImage from './work-in-progress.png';
-
+import './Checkitems.css';
 function CheckItems({ toDo, toggleCompleted, toggleInProgress }) {
   return (
-    <li style={{display: 'flex'}}>
+    <li style={{ display: 'flex', alignItems: 'center', marginBottom: '5px' }}>
       <label>
-        <input
+        <input 
           type="checkbox"
+style = {{width:'20px', height:'15px', cursor:'pointer',  borderRadius: '20px'}}
           checked={toDo.inProgress}
           onChange={() => toggleInProgress(toDo.id)}
         />
@@ -15,6 +16,8 @@ function CheckItems({ toDo, toggleCompleted, toggleInProgress }) {
       <label>
         <input
           type="checkbox"
+          style = {{width:'20px', height:'15px', cursor:'pointer',  borderRadius: '20px', marginLeft: '20px'}}
+
           checked={toDo.completed}
           onChange={() => toggleCompleted(toDo.id)}
         />
@@ -22,7 +25,7 @@ function CheckItems({ toDo, toggleCompleted, toggleInProgress }) {
       </label>
       <span style={{ marginLeft: '50px', textDecoration: toDo.completed ? 'line-through' : 'none' }}>
         {toDo.text}
-        {toDo.inProgress && <img src={inProgressImage}></img>}
+        {toDo.inProgress && <img src={inProgressImage} style={{ width: '60px', height: '60px', marginLeft: '20px' }}></img>}
       </span>
     </li>
   );
