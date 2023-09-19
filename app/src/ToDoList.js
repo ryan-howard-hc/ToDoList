@@ -17,12 +17,13 @@ function ToDoList() {
     console.log('Data saved to localStorage:', toDos);
   }, [toDos]);
 
-  function addItem(itemText) {
+  function addItem(itemText,dueDate) {
     const newToDo = {
       id: Date.now(),
       text: itemText,
       completed: false,
       inProgress: false,
+      dueDate: dueDate,
     };
 
     setToDos([...toDos, newToDo]);

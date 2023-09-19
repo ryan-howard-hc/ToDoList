@@ -4,10 +4,7 @@
     src: url(Monday.ttf);
   }
   
-.container{
-  font-family: 'Monday';
 
-}
 
   
   .container2 {
@@ -31,6 +28,7 @@
     padding: 5px;
     margin-top: 5px;
     text-align: center;
+    font-size: 24px;
   }
 
 
@@ -38,4 +36,5 @@
   .button-container {
     text-align: center;
     margin-top: 20px;
+    font-family: 'Monday';
   }
